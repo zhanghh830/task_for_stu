@@ -2,7 +2,6 @@ package com.ear.task_for_stu.ui.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -16,9 +15,7 @@ import com.ear.task_for_stu.biz.UserBiz;
 import com.ear.task_for_stu.listener.ClickListener;
 import com.ear.task_for_stu.ui.activity.manager.ManagerCreateNewUserActivity;
 import com.ear.task_for_stu.ui.activity.manager.ManagerQuestionCenterActivity;
-import com.ear.task_for_stu.ui.activity.manager.ManagerTaskCenterActivity;
 import com.ear.task_for_stu.ui.activity.manager.ManagerUserCenterActivity;
-import com.ear.task_for_stu.ui.activity.user.BasicInfoActivity;
 
 /**
  * 所有activity的基本超类，用来抽取常用方法
@@ -83,11 +80,11 @@ public class BaseActivity extends AppCompatActivity {
         finish();
     }
 
-    protected void toManagerTaskCenterActivity() {
-        Intent intent = new Intent(this, ManagerTaskCenterActivity.class);
-        startActivity(intent);
-        finish();
-    }
+//    protected void toManagerTaskCenterActivity() {
+//        Intent intent = new Intent(this, ManagerTaskCenterActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 
     protected void toManagerCreateNewUserActivity() {
         Intent intent = new Intent(this, ManagerCreateNewUserActivity.class);

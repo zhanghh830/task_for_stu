@@ -25,7 +25,6 @@ public class ImageUpload {
 
             @Override
             public void run()  {
-                //子线程需要做的工作
                 OkHttpClient client = new OkHttpClient().newBuilder().connectTimeout(60000, TimeUnit.MILLISECONDS)
                         .readTimeout(60000, TimeUnit.MILLISECONDS)
                         .build();
@@ -36,7 +35,7 @@ public class ImageUpload {
                         .build();
                 //设置ip地址
                 Request request = new Request.Builder()
-                        .url("http://122.235.98.19:5000/upload")
+                        .url("http://122.235.98.135:5000/upload")
                         .post(requestBody)
                         .build();
                 try(Response response = client.newCall(request).execute()){

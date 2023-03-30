@@ -74,7 +74,6 @@ public class ManagerCreateNewUserActivity extends BaseActivity {
                 }
                 user.setRepeatCount(0);
                 user.setTaskCount(0);
-                user.setGrade(Integer.parseInt(grade.getText().toString()));
                 user.setIdCard(idcard.getText().toString());
                 user.setNickName(nickname.getText().toString());
                 user.setPassword(password.getText().toString());
@@ -125,7 +124,6 @@ public class ManagerCreateNewUserActivity extends BaseActivity {
             create.setText("保存修改");
             radioGroup.setVisibility(View.GONE);
         }
-        grade.setText(user.getGrade() == null ? "" :user.getGrade()+"");
         idcard.setText(user.getIdCard());
         nickname.setText(user.getNickName());
         password.setText(user.getPassword());

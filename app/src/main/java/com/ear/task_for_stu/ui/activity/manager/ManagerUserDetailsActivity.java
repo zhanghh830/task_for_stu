@@ -100,12 +100,12 @@ public class ManagerUserDetailsActivity extends BaseActivity {
             }
         });
 
-        taskCenter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toManagerTaskCenterActivity();
-            }
-        });
+//        taskCenter.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                toManagerTaskCenterActivity();
+//            }
+//        });
         userBoard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

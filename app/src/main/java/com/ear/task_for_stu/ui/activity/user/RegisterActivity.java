@@ -56,7 +56,6 @@ public class RegisterActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 //TODO 发起来自biz的请求
-                user.setGrade(100);
                 user.setRepeatCount(0);
                 user.setTaskCount(0);
                 user.setManager(false);

@@ -29,7 +29,6 @@ public class BasicInfoActivity extends BaseActivity {
     ImageView qs;
     ImageView tk;
     TextView nickname;
-    TextView grade;
     TextView logOut;
     LinearLayout myTask;
     LinearLayout myQuestion;
@@ -50,7 +49,6 @@ public class BasicInfoActivity extends BaseActivity {
     private void initView() {
         icon = findViewById(R.id.id_iv_icon);
         nickname = findViewById(R.id.id_tv_nickname);
-        grade = findViewById(R.id.id_tv_grade);
         logOut = findViewById(R.id.id_tv_logout);
         myTask = findViewById(R.id.id_ll_myTask);
         myQuestion = findViewById(R.id.id_ll_myQuestion);
@@ -100,7 +98,6 @@ public class BasicInfoActivity extends BaseActivity {
                         .transform(new CircleTransform())
                         .into(icon);
                 nickname.setText(user.getNickName());
-                grade.setText(user.getGrade() + "");
                 T.showToast("用户数据更新完成！");
             }
         });
@@ -130,7 +127,7 @@ public class BasicInfoActivity extends BaseActivity {
         TaskCenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toTaskCenterActivity();
+                toImageUploadActivity();
             }
         });
 
@@ -147,12 +144,7 @@ public class BasicInfoActivity extends BaseActivity {
             }
         });
 
-        myTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toMyTaskActivity();
-            }
-        });
+
 
         myQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,8 +166,8 @@ public class BasicInfoActivity extends BaseActivity {
         finish();
     }
 
-    private void toTaskCenterActivity() {
-        Intent intent = new Intent(this,TaskCenterActivity.class);
+    private void toImageUploadActivity() {
+        Intent intent = new Intent(this,ImageUploadActivity.class);
         startActivity(intent);
         finish();
     }
@@ -188,11 +180,6 @@ public class BasicInfoActivity extends BaseActivity {
 
     private void toMyQuestionActivity() {
         Intent intent = new Intent(this,MyQuestionActivity.class);
-        startActivity(intent);
-    }
-
-    private void toMyTaskActivity() {
-        Intent intent = new Intent(this,MyTaskActivity.class);
         startActivity(intent);
     }
 

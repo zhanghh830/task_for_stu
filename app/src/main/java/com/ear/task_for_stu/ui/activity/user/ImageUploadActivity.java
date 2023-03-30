@@ -1,6 +1,7 @@
-package com.ear.task_for_stu.imageupload;
+package com.ear.task_for_stu.ui.activity.user;
 
-import android.annotation.SuppressLint;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -12,26 +13,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.ear.task_for_stu.R;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.ear.task_for_stu.R;
+import com.ear.task_for_stu.imageupload.ImageUpload;
+
 public class ImageUploadActivity extends AppCompatActivity {
     private Button button;
     private Button button_take;
     private static final int REQUEST_PICK_IMAGE = 1;
     private static final int REQUEST_IMAGE_CAPTURE = 2;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_imageupload);
+        setContentView(R.layout.activity_image_upload);
 
         button=findViewById(R.id.button);
         button_take=findViewById(R.id.button_take);
@@ -51,7 +50,9 @@ public class ImageUploadActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
             }
         });
+
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -103,5 +104,6 @@ public class ImageUploadActivity extends AppCompatActivity {
         );
         return image;
     }
+
 
 }

@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class User implements Serializable {
     Long id;
-    Integer grade;
     Integer repeatCount;
     Integer taskCount;
     String nickName;
@@ -21,7 +20,6 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return
-                "积分:" + grade + "\n\n" +
                 "采纳回复数：" + repeatCount + "\n\n" +
                 "任务达成量：" + taskCount + "\n\n" +
                 "昵称：" + nickName + "\n\n" +
@@ -39,14 +37,6 @@ public class User implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Integer getGrade() {
-        return grade;
-    }
-
-    public void setGrade(Integer grade) {
-        this.grade = grade;
     }
 
     public Integer getRepeatCount() {

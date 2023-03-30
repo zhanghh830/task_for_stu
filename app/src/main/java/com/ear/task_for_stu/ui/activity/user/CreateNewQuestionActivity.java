@@ -41,25 +41,20 @@ public class CreateNewQuestionActivity extends BaseActivity {
             public void onClick(View view) {
                 String te = title.getText().toString();
                 String ct = content.getText().toString();
-                String rds = reward.getText().toString();
-                if (!BasicUtils.StringArrayEmpty(new String[]{te, ct , rds})) {
+                if (!BasicUtils.StringArrayEmpty(new String[]{te, ct })) {
                     T.showToast("输入的信息不能为空哦~");
                     return;
                 }
-                int rd = Integer.parseInt(rds);
+
 
                 User user = UserInfoHolder.getInstance().geteUser();
-                if(!(rd > 0 && rd <= user.getGrade())){
-                    T.showToast("输入的积分不能小于0或者大于自己拥有的数值哦~");
-                    return;
-                }
-                user.setGrade(user.getGrade() - rd);
+
+
                 UserInfoHolder.getInstance().setUser(user);
                 BaseTask baseTask = new BaseTask();
                 baseTask.setContentDesc(ct);
                 baseTask.setPuid(user.getId());
                 baseTask.setTitle(te);
-                baseTask.setReward(rd);
                 baseTask.setJugFlag((byte) Config.IS_QUESTION);
                 //TODO 管理员功能实现后应订正为待审核
                 baseTask.setCurrentState(Config.WAIT_PASSED);
@@ -91,7 +86,7 @@ public class CreateNewQuestionActivity extends BaseActivity {
     private void initView() {
         title = findViewById(R.id.id_et_title);
         content = findViewById(R.id.id_et_content);
-        reward = findViewById(R.id.id_et_reward);
+
         button = findViewById(R.id.id_btn_submit);
         question = new Question();
         questionBiz = new QuestionBiz();

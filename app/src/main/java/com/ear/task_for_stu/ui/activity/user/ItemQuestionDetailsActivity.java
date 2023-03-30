@@ -150,7 +150,7 @@ public class ItemQuestionDetailsActivity extends BaseActivity {
         TaskCenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toTaskCenterActivity();
+                toImageUploadActivity();
             }
         });
 
@@ -263,8 +263,8 @@ public class ItemQuestionDetailsActivity extends BaseActivity {
         finish();
     }
 
-    private void toTaskCenterActivity() {
-        Intent intent = new Intent(this,TaskCenterActivity.class);
+    private void toImageUploadActivity() {
+        Intent intent = new Intent(this, ImageUploadActivity.class);
         startActivity(intent);
         finish();
     }

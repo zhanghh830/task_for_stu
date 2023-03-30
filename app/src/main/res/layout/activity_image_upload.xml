@@ -5,64 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.user.MyTaskActivity">
+    tools:context=".ui.activity.user.ImageUploadActivity">
     <include layout="@layout/common_toolbar"/>
+
     <LinearLayout
-        android:layout_marginTop="15sp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/id_tv_all"
-            android:text="全部"
-            android:layout_marginLeft="40sp"
-            android:textColor="#1296db"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <View
-            android:layout_width="1dp"
-            android:layout_marginLeft="25sp"
-            android:layout_height="match_parent"
-            android:background="@color/lfile_gray"/>
-        <TextView
-            android:id="@+id/id_tv_taskSolved"
-            android:textColor="#1296db"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:text="我接受过的"
-            android:layout_marginLeft="25sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <View
-            android:layout_width="1dp"
-            android:layout_marginLeft="25sp"
-            android:layout_height="match_parent"
-            android:background="@color/lfile_lightgray"/>
-        <TextView
-            android:id="@+id/id_tv_taskPosted"
-            android:textColor="#1296db"
-            android:textStyle="bold"
-            android:text="我发布过的"
-            android:layout_marginLeft="25sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:layout_height="499dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="465dp"></ImageView>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/id_recyclerview"
-        android:layout_marginTop="5sp"
-        android:layout_marginLeft="25sp"
-        android:layout_marginRight="25sp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500sp">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="105dp"
+        android:orientation="horizontal">
 
 
+        <Button
+            android:id="@+id/button_take"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:text="用相机去拍照" />
 
-
-
-
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="从相册中选取" />
+    </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
@@ -70,7 +45,7 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/id_ll_taskCenter"
-            android:layout_marginLeft="38dp"
+            android:layout_marginLeft="50dp"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -89,7 +64,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="38dp"
+            android:layout_marginLeft="50dp"
             android:id="@+id/id_ll_questionCenter"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -108,7 +83,7 @@
                 android:text="问答"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginLeft="38dp"
+            android:layout_marginLeft="50dp"
             android:id="@+id/id_ll_leaderBoard"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -128,7 +103,7 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/id_ll_userCenter"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="50dp"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -146,4 +121,6 @@
                 android:text="个人中心"/>
         </LinearLayout>
     </LinearLayout>
+
+
 </LinearLayout>
